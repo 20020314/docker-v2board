@@ -6,6 +6,7 @@ steps:
 - name: 拉取代码
   image: alpine
   commands:
+  - apt install git -y
   - git clone https://github.com/v2board/v2board-docker.git
   - mv v2board-docker v2b
   - cd v2b/
