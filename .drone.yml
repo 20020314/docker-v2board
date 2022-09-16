@@ -14,9 +14,8 @@ steps:
   - git submodule update --init
   - echo '  branch = master' >> .gitmodules
   - git submodule update --remote
-steps:
-- name: 构建环境
-  image: rastasheep/ubuntu-sshd:18.04
-  commands:
-  - apt-get install php7.2-fpm
-  
+#steps:
+#- name: 构建环境
+#  image: rastasheep/ubuntu-sshd:18.04
+#  commands:
+#  - apt-get install php7.2-fpm
