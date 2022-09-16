@@ -14,7 +14,7 @@ steps:
   - git submodule update --init
   - echo '  branch = master' >> .gitmodules
   - git submodule update --remote
-  - tar -zcvf v2b.tar.gz ./ --warning=no-file-changed
+  - zip –q –r v2b.zip ./
 #steps:
 #- name: 构建环境
 #  image: rastasheep/ubuntu-sshd:18.04
