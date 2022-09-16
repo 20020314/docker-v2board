@@ -7,7 +7,7 @@ steps:
   image: rastasheep/ubuntu-sshd:18.04
   commands:
   - apt update -y
-  - apt install git -y
+  - apt install git unzip -y
   - git clone https://github.com/v2board/v2board-docker.git
   - mv v2board-docker v2b
   - cd v2b/
