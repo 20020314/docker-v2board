@@ -6,15 +6,12 @@ steps:
 - name: 拉取代码
   image: rastasheep/ubuntu-sshd:18.04
   commands:
-  - apt update -y
-  - apt install git unzip -y
-  - git clone https://github.com/v2board/v2board-docker.git
+  - cd /drone/src/.git/
   - mv v2board-docker v2b
   - cd v2b/
   - git submodule update --init
   - echo '  branch = master' >> .gitmodules
   - git submodule update --remote
-  - zip –q –r v2b.zip ./
 #steps:
 #- name: 构建环境
 #  image: rastasheep/ubuntu-sshd:18.04
