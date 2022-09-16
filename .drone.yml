@@ -2,7 +2,7 @@ kind: pipeline
 type: docker
 name: build
 steps:
-  - name: 拉取镜像
+- name: 拉取镜像
   image: alpine
     volumes:
     - name: lin
