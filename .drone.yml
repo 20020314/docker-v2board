@@ -1,14 +1,11 @@
 kind: pipeline
 type: docker
 name: build
+
 steps:
-- name: 拉取镜像
+- name: 拉取代码
   image: alpine
-    volumes:
-    - name: lin
-      path: /home/v2b
-      commands:
-  - cd /home/v2b   
+  commands:
   - git clone https://github.com/v2board/v2board-docker.git
   - mv v2board-docker v2b
   - cd v2b/
